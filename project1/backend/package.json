@@ -1,5 +1,5 @@
 {
-  "name": "project1",
+  "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,5 +7,9 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
 }
