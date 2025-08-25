@@ -25,4 +25,9 @@ jobs:
             cd /root/bootcamp-dev/project1/frontend
             npm install
             npm run build
+            cd /root/bootcamp-dev/project2/backend
+            npm install
+            cd /root/bootcamp-dev/project2/frontend
+            npm install
+            npm run build
             pm2 restart all
