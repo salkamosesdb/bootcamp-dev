@@ -8,9 +8,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-
       - name: Deploy to Server (via SSH)
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -18,16 +15,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd bootcamp-dev
-            git pull origin main
-            cd /root/bootcamp-dev/project1/backend
-            npm install
-            cd /root/bootcamp-dev/project1/frontend
-            npm install
-            npm run build
-            cd /root/bootcamp-dev/project2/backend
-            npm install
-            cd /root/bootcamp-dev/project2/frontend
-            npm install
-            npm run build
-            pm2 restart all
+            ./run.sh
